@@ -6,7 +6,7 @@ from . import __version__ as app_version
 app_name = "quantity_survey"
 app_title = "Quantity Survey"
 app_publisher = "Monak"
-app_description = "Comprehensive Quantity Surveying Module for Monak v8"
+app_description = "Comprehensive Quantity Surveying Module for Monak v15"
 app_icon = "fa fa-file-text"
 app_color = "blue"
 app_email = "amonak@monakerp.com"
@@ -219,7 +219,7 @@ web_page_context = {
     }
 }
 
-# Additional Settings for Monak v8
+# Additional Settings for Monak v15
 # ----------------------------------
 
 # Standard field customizations and fixtures

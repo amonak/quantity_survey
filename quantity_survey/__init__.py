@@ -1,7 +1,7 @@
 """
-Quantity Survey App for Monak v8
+Quantity Survey App for Monak v15
 
-A comprehensive construction management solution that seamlessly integrates with Monak v8
+A comprehensive construction management solution that seamlessly integrates with Monak v15
 to provide complete quantity surveying functionality including Bill of Quantities (BoQ),
 Valuations, Payment Certificates, Variation Orders, Cost Planning, Tender Management,
 and Final Accounts.

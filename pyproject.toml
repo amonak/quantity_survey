@@ -3,7 +3,7 @@ name = "quantity_survey"
 authors = [
     { name = "Monak", email = "amonak@monakerp.com"}
 ]
-description = "Comprehensive Quantity Surveying Module for Monak v8"
+description = "Comprehensive Quantity Surveying Module for Monak v15"
 requires-python = ">=3.8"
 readme = "README.md"
 dynamic = ["version"]

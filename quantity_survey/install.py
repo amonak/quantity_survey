@@ -62,12 +62,6 @@ def get_custom_fields():
 				"fieldtype": "Check",
 				"insert_after": "qs_section"
 			},
-			{
-				"fieldname": "standard_rate",
-				"label": "Standard Rate",
-				"fieldtype": "Currency",
-				"insert_after": "is_construction_item"
-			}
 		]
 	}
 	return custom_fields

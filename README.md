@@ -1,6 +1,6 @@
 # Quantity Survey
 
-Comprehensive Quantity Surveying Module for Monak v8
+Comprehensive Quantity Surveying Module for Monak v15
 
 ## Features
 
