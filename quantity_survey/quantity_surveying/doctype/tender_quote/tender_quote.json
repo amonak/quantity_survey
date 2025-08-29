@@ -1,0 +1,289 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "naming_series:",
+	"creation": "2025-07-29 12:00:00.000000",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"naming_series",
+		"tender_package",
+		"supplier",
+		"quote_status",
+		"column_break_5",
+		"quote_date",
+		"quote_validity",
+		"delivery_period",
+		"section_break_9",
+		"quote_items",
+		"section_break_11",
+		"total_base_amount",
+		"discount_percentage",
+		"discount_amount",
+		"column_break_15",
+		"tax_percentage",
+		"tax_amount",
+		"total_quote_amount",
+		"section_break_19",
+		"technical_compliance",
+		"commercial_compliance",
+		"overall_score",
+		"column_break_23",
+		"evaluation_notes",
+		"recommendation",
+		"section_break_26",
+		"bid_security_submitted",
+		"bid_security_amount",
+		"bid_security_reference",
+		"column_break_30",
+		"performance_guarantee_offered",
+		"warranty_period",
+		"payment_terms"
+	],
+	"fields": [
+		{
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"label": "Series",
+			"options": "TQ-.YYYY.-",
+			"reqd": 1
+		},
+		{
+			"fieldname": "tender_package",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Tender Package",
+			"options": "Tender Package",
+			"reqd": 1
+		},
+		{
+			"fieldname": "supplier",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Supplier",
+			"options": "Supplier",
+			"reqd": 1
+		},
+		{
+			"default": "Draft",
+			"fieldname": "quote_status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Status",
+			"options": "Draft\nSubmitted\nUnder Evaluation\nAccepted\nRejected\nWithdrawn"
+		},
+		{
+			"fieldname": "column_break_5",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "Today",
+			"fieldname": "quote_date",
+			"fieldtype": "Date",
+			"label": "Quote Date",
+			"reqd": 1
+		},
+		{
+			"fieldname": "quote_validity",
+			"fieldtype": "Data",
+			"label": "Quote Validity"
+		},
+		{
+			"fieldname": "delivery_period",
+			"fieldtype": "Data",
+			"label": "Delivery Period"
+		},
+		{
+			"fieldname": "section_break_9",
+			"fieldtype": "Section Break",
+			"label": "Quote Items"
+		},
+		{
+			"fieldname": "quote_items",
+			"fieldtype": "Table",
+			"label": "Quote Items",
+			"options": "Tender Quote Item",
+			"reqd": 1
+		},
+		{
+			"fieldname": "section_break_11",
+			"fieldtype": "Section Break",
+			"label": "Totals"
+		},
+		{
+			"fieldname": "total_base_amount",
+			"fieldtype": "Currency",
+			"label": "Total Base Amount",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "discount_percentage",
+			"fieldtype": "Percent",
+			"label": "Discount %"
+		},
+		{
+			"fieldname": "discount_amount",
+			"fieldtype": "Currency",
+			"label": "Discount Amount",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_15",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "tax_percentage",
+			"fieldtype": "Percent",
+			"label": "Tax %"
+		},
+		{
+			"fieldname": "tax_amount",
+			"fieldtype": "Currency",
+			"label": "Tax Amount",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "total_quote_amount",
+			"fieldtype": "Currency",
+			"in_list_view": 1,
+			"label": "Total Quote Amount",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "section_break_19",
+			"fieldtype": "Section Break",
+			"label": "Evaluation"
+		},
+		{
+			"fieldname": "technical_compliance",
+			"fieldtype": "Percent",
+			"label": "Technical Compliance %"
+		},
+		{
+			"fieldname": "commercial_compliance",
+			"fieldtype": "Percent",
+			"label": "Commercial Compliance %"
+		},
+		{
+			"fieldname": "overall_score",
+			"fieldtype": "Percent",
+			"label": "Overall Score %",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_23",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "evaluation_notes",
+			"fieldtype": "Text Editor",
+			"label": "Evaluation Notes"
+		},
+		{
+			"fieldname": "recommendation",
+			"fieldtype": "Select",
+			"label": "Recommendation",
+			"options": "Recommended\nNot Recommended\nConditionally Recommended"
+		},
+		{
+			"fieldname": "section_break_26",
+			"fieldtype": "Section Break",
+			"label": "Compliance & Guarantees"
+		},
+		{
+			"default": "0",
+			"fieldname": "bid_security_submitted",
+			"fieldtype": "Check",
+			"label": "Bid Security Submitted"
+		},
+		{
+			"fieldname": "bid_security_amount",
+			"fieldtype": "Currency",
+			"label": "Bid Security Amount",
+			"precision": "2"
+		},
+		{
+			"fieldname": "bid_security_reference",
+			"fieldtype": "Data",
+			"label": "Bid Security Reference"
+		},
+		{
+			"fieldname": "column_break_30",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "0",
+			"fieldname": "performance_guarantee_offered",
+			"fieldtype": "Check",
+			"label": "Performance Guarantee Offered"
+		},
+		{
+			"fieldname": "warranty_period",
+			"fieldtype": "Data",
+			"label": "Warranty Period"
+		},
+		{
+			"fieldname": "payment_terms",
+			"fieldtype": "Text",
+			"label": "Payment Terms"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"is_submittable": 1,
+	"links": [],
+	"modified": "2025-07-29 12:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Quantity Surveying",
+	"name": "Tender Quote",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Quantity Surveyor",
+			"share": 1,
+			"submit": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Projects Manager",
+			"share": 1,
+			"submit": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Supplier",
+			"share": 1,
+			"submit": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

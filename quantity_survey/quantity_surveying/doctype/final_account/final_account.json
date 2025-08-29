@@ -1,0 +1,420 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "naming_series:",
+	"creation": "2025-07-29 12:00:00.000000",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"naming_series",
+		"final_account_title",
+		"project",
+		"status",
+		"column_break_5",
+		"contractor",
+		"contract_amount",
+		"final_account_date",
+		"project_completion_date",
+		"section_break_10",
+		"original_contract_value",
+		"approved_variations_total",
+		"unapproved_variations_total",
+		"column_break_14",
+		"claims_amount",
+		"contra_charges",
+		"adjusted_contract_value",
+		"section_break_18",
+		"work_done_to_date",
+		"materials_on_site",
+		"retention_released",
+		"column_break_22",
+		"previous_payments",
+		"current_payment_due",
+		"final_payment_amount",
+		"section_break_26",
+		"final_account_items",
+		"section_break_28",
+		"total_certified_value",
+		"less_retention_percentage",
+		"retention_amount",
+		"column_break_32",
+		"net_amount_due",
+		"vat_percentage",
+		"vat_amount",
+		"gross_amount_payable",
+		"section_break_37",
+		"defects_liability_period",
+		"warranty_period",
+		"performance_guarantee_status",
+		"column_break_41",
+		"maintenance_bond_required",
+		"maintenance_bond_amount",
+		"insurance_validity",
+		"section_break_45",
+		"final_account_summary",
+		"reconciliation_notes",
+		"column_break_48",
+		"project_completion_certificate",
+		"handover_certificate",
+		"section_break_51",
+		"cost_variance_analysis",
+		"lessons_learned"
+	],
+	"fields": [
+		{
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"label": "Series",
+			"options": "FA-.YYYY.-",
+			"reqd": 1
+		},
+		{
+			"fieldname": "final_account_title",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Final Account Title",
+			"reqd": 1
+		},
+		{
+			"fieldname": "project",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Project",
+			"options": "Project",
+			"reqd": 1
+		},
+		{
+			"default": "Draft",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Status",
+			"options": "Draft\nUnder Review\nDisputed\nAgreed\nClosed"
+		},
+		{
+			"fieldname": "column_break_5",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "contractor",
+			"fieldtype": "Link",
+			"label": "Contractor",
+			"options": "Supplier",
+			"reqd": 1
+		},
+		{
+			"fieldname": "contract_amount",
+			"fieldtype": "Currency",
+			"label": "Original Contract Amount",
+			"precision": "2"
+		},
+		{
+			"default": "Today",
+			"fieldname": "final_account_date",
+			"fieldtype": "Date",
+			"label": "Final Account Date"
+		},
+		{
+			"fieldname": "project_completion_date",
+			"fieldtype": "Date",
+			"label": "Project Completion Date"
+		},
+		{
+			"fieldname": "section_break_10",
+			"fieldtype": "Section Break",
+			"label": "Contract Summary"
+		},
+		{
+			"fieldname": "original_contract_value",
+			"fieldtype": "Currency",
+			"label": "Original Contract Value",
+			"precision": "2"
+		},
+		{
+			"fieldname": "approved_variations_total",
+			"fieldtype": "Currency",
+			"label": "Approved Variations Total",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "unapproved_variations_total",
+			"fieldtype": "Currency",
+			"label": "Unapproved Variations Total",
+			"precision": "2"
+		},
+		{
+			"fieldname": "column_break_14",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "claims_amount",
+			"fieldtype": "Currency",
+			"label": "Claims Amount",
+			"precision": "2"
+		},
+		{
+			"fieldname": "contra_charges",
+			"fieldtype": "Currency",
+			"label": "Contra Charges",
+			"precision": "2"
+		},
+		{
+			"fieldname": "adjusted_contract_value",
+			"fieldtype": "Currency",
+			"label": "Adjusted Contract Value",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "section_break_18",
+			"fieldtype": "Section Break",
+			"label": "Payment Summary"
+		},
+		{
+			"fieldname": "work_done_to_date",
+			"fieldtype": "Currency",
+			"label": "Work Done to Date",
+			"precision": "2"
+		},
+		{
+			"fieldname": "materials_on_site",
+			"fieldtype": "Currency",
+			"label": "Materials on Site",
+			"precision": "2"
+		},
+		{
+			"fieldname": "retention_released",
+			"fieldtype": "Currency",
+			"label": "Retention Released",
+			"precision": "2"
+		},
+		{
+			"fieldname": "column_break_22",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "previous_payments",
+			"fieldtype": "Currency",
+			"label": "Previous Payments",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "current_payment_due",
+			"fieldtype": "Currency",
+			"label": "Current Payment Due",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "final_payment_amount",
+			"fieldtype": "Currency",
+			"label": "Final Payment Amount",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "section_break_26",
+			"fieldtype": "Section Break",
+			"label": "Final Account Items"
+		},
+		{
+			"fieldname": "final_account_items",
+			"fieldtype": "Table",
+			"label": "Final Account Items",
+			"options": "Final Account Item"
+		},
+		{
+			"fieldname": "section_break_28",
+			"fieldtype": "Section Break",
+			"label": "Final Calculations"
+		},
+		{
+			"fieldname": "total_certified_value",
+			"fieldtype": "Currency",
+			"label": "Total Certified Value",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "less_retention_percentage",
+			"fieldtype": "Percent",
+			"label": "Retention %"
+		},
+		{
+			"fieldname": "retention_amount",
+			"fieldtype": "Currency",
+			"label": "Retention Amount",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_32",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "net_amount_due",
+			"fieldtype": "Currency",
+			"label": "Net Amount Due",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "vat_percentage",
+			"fieldtype": "Percent",
+			"label": "VAT %"
+		},
+		{
+			"fieldname": "vat_amount",
+			"fieldtype": "Currency",
+			"label": "VAT Amount",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "gross_amount_payable",
+			"fieldtype": "Currency",
+			"label": "Gross Amount Payable",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "section_break_37",
+			"fieldtype": "Section Break",
+			"label": "Project Closure"
+		},
+		{
+			"fieldname": "defects_liability_period",
+			"fieldtype": "Data",
+			"label": "Defects Liability Period"
+		},
+		{
+			"fieldname": "warranty_period",
+			"fieldtype": "Data",
+			"label": "Warranty Period"
+		},
+		{
+			"fieldname": "performance_guarantee_status",
+			"fieldtype": "Select",
+			"label": "Performance Guarantee Status",
+			"options": "Active\nReleased\nClaimed\nExpired"
+		},
+		{
+			"fieldname": "column_break_41",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "0",
+			"fieldname": "maintenance_bond_required",
+			"fieldtype": "Check",
+			"label": "Maintenance Bond Required"
+		},
+		{
+			"fieldname": "maintenance_bond_amount",
+			"fieldtype": "Currency",
+			"label": "Maintenance Bond Amount",
+			"precision": "2"
+		},
+		{
+			"fieldname": "insurance_validity",
+			"fieldtype": "Date",
+			"label": "Insurance Validity"
+		},
+		{
+			"fieldname": "section_break_45",
+			"fieldtype": "Section Break",
+			"label": "Documentation"
+		},
+		{
+			"fieldname": "final_account_summary",
+			"fieldtype": "Text Editor",
+			"label": "Final Account Summary"
+		},
+		{
+			"fieldname": "reconciliation_notes",
+			"fieldtype": "Text Editor",
+			"label": "Reconciliation Notes"
+		},
+		{
+			"fieldname": "column_break_48",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "project_completion_certificate",
+			"fieldtype": "Attach",
+			"label": "Project Completion Certificate"
+		},
+		{
+			"fieldname": "handover_certificate",
+			"fieldtype": "Attach",
+			"label": "Handover Certificate"
+		},
+		{
+			"fieldname": "section_break_51",
+			"fieldtype": "Section Break",
+			"label": "Analysis & Learning"
+		},
+		{
+			"fieldname": "cost_variance_analysis",
+			"fieldtype": "Text Editor",
+			"label": "Cost Variance Analysis"
+		},
+		{
+			"fieldname": "lessons_learned",
+			"fieldtype": "Text Editor",
+			"label": "Lessons Learned"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"is_submittable": 1,
+	"links": [],
+	"modified": "2025-07-29 12:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Quantity Surveying",
+	"name": "Final Account",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Quantity Surveyor",
+			"share": 1,
+			"submit": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Projects Manager",
+			"share": 1,
+			"submit": 1,
+			"write": 1
+		},
+		{
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Projects User",
+			"share": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

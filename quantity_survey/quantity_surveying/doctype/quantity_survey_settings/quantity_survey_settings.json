@@ -1,0 +1,162 @@
+{
+	"actions": [],
+	"allow_import": 0,
+	"allow_rename": 0,
+	"autoname": "",
+	"creation": "2025-07-29 12:00:00.000000",
+	"doctype": "DocType",
+	"document_type": "Document",
+	"engine": "InnoDB",
+	"field_order": [
+		"general_settings_section",
+		"default_company",
+		"default_retention_percentage",
+		"column_break_4",
+		"auto_create_cost_plan",
+		"create_accounting_entries",
+		"accounting_section",
+		"default_wip_account",
+		"default_creditors_account",
+		"column_break_9",
+		"default_retention_account",
+		"default_advance_account",
+		"notification_section",
+		"enable_email_notifications",
+		"notification_recipients",
+		"column_break_14",
+		"budget_alert_threshold",
+		"send_payment_reminders"
+	],
+	"fields": [
+		{
+			"fieldname": "general_settings_section",
+			"fieldtype": "Section Break",
+			"label": "General Settings"
+		},
+		{
+			"fieldname": "default_company",
+			"fieldtype": "Link",
+			"label": "Default Company",
+			"options": "Company"
+		},
+		{
+			"default": "5",
+			"fieldname": "default_retention_percentage",
+			"fieldtype": "Percent",
+			"label": "Default Retention Percentage"
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "0",
+			"fieldname": "auto_create_cost_plan",
+			"fieldtype": "Check",
+			"label": "Auto Create Cost Plan for New Projects"
+		},
+		{
+			"default": "1",
+			"fieldname": "create_accounting_entries",
+			"fieldtype": "Check",
+			"label": "Create Accounting Entries"
+		},
+		{
+			"collapsible": 1,
+			"depends_on": "create_accounting_entries",
+			"fieldname": "accounting_section",
+			"fieldtype": "Section Break",
+			"label": "Accounting Settings"
+		},
+		{
+			"fieldname": "default_wip_account",
+			"fieldtype": "Link",
+			"label": "Default Work in Progress Account",
+			"options": "Account"
+		},
+		{
+			"fieldname": "default_creditors_account",
+			"fieldtype": "Link",
+			"label": "Default Creditors Account",
+			"options": "Account"
+		},
+		{
+			"fieldname": "column_break_9",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "default_retention_account",
+			"fieldtype": "Link",
+			"label": "Default Retention Payable Account",
+			"options": "Account"
+		},
+		{
+			"fieldname": "default_advance_account",
+			"fieldtype": "Link",
+			"label": "Default Advance Account",
+			"options": "Account"
+		},
+		{
+			"collapsible": 1,
+			"fieldname": "notification_section",
+			"fieldtype": "Section Break",
+			"label": "Notification Settings"
+		},
+		{
+			"default": "1",
+			"fieldname": "enable_email_notifications",
+			"fieldtype": "Check",
+			"label": "Enable Email Notifications"
+		},
+		{
+			"depends_on": "enable_email_notifications",
+			"fieldname": "notification_recipients",
+			"fieldtype": "Small Text",
+			"label": "Default Notification Recipients"
+		},
+		{
+			"fieldname": "column_break_14",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "90",
+			"fieldname": "budget_alert_threshold",
+			"fieldtype": "Percent",
+			"label": "Budget Alert Threshold"
+		},
+		{
+			"default": "1",
+			"fieldname": "send_payment_reminders",
+			"fieldtype": "Check",
+			"label": "Send Payment Reminders"
+		}
+	],
+	"idx": 0,
+	"is_submittable": 0,
+	"issingle": 1,
+	"links": [],
+	"modified": "2025-07-29 12:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Quantity Surveying",
+	"name": "Quantity Survey Settings",
+	"naming_rule": "",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

@@ -1,0 +1,369 @@
+/* Copyright (c) 2025, Alphamonak Solutions */
+
+/* Mobile-specific CSS for Quantity Survey App */
+
+/* Touch-friendly interface */
+.mobile-view {
+    font-size: 16px; /* Prevent zoom on iOS */
+}
+
+.mobile-btn {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: none;
+    background: #1976d2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mobile-btn:hover,
+.mobile-btn:active {
+    background: #1565c0;
+    transform: scale(0.98);
+}
+
+.mobile-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Form controls for mobile */
+.mobile-input {
+    min-height: 44px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mobile-input:focus {
+    border-color: #1976d2;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+}
+
+/* Navigation for mobile */
+.mobile-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0;
+    z-index: 1000;
+}
+
+.mobile-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    text-decoration: none;
+    color: #666;
+    font-size: 12px;
+    min-width: 44px;
+}
+
+.mobile-nav-item.active {
+    color: #1976d2;
+}
+
+.mobile-nav-icon {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+/* Card layout for mobile */
+.mobile-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+}
+
+.mobile-card-header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.mobile-card-content {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* List view for mobile */
+.mobile-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-list-item {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 44px;
+}
+
+.mobile-list-item:last-child {
+    border-bottom: none;
+}
+
+.mobile-list-item:active {
+    background: #f5f5f5;
+}
+
+/* Measurement tool mobile styles */
+.mobile-measurement-panel {
+    position: fixed;
+    bottom: 80px; /* Above navigation */
+    left: 16px;
+    right: 16px;
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    z-index: 999;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.mobile-measurement-panel.active {
+    transform: translateY(0);
+}
+
+.mobile-measurement-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.mobile-measurement-display {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1976d2;
+    margin-bottom: 16px;
+}
+
+/* Swipe gestures */
+.mobile-swipe-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-swipe-actions {
+    position: absolute;
+    top: 0;
+    right: -100px;
+    bottom: 0;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dc3545;
+    color: white;
+    font-size: 18px;
+}
+
+/* Photo capture */
+.mobile-camera-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.mobile-camera-preview {
+    width: 100%;
+    border-radius: 8px;
+    background: #f8f9fa;
+    border: 2px dashed #ddd;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+.mobile-camera-controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.mobile-capture-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #1976d2;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Offline indicator */
+.mobile-offline-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ff9800;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    z-index: 1001;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.mobile-offline-indicator.show {
+    transform: translateY(0);
+}
+
+/* Progress indicators */
+.mobile-progress {
+    width: 100%;
+    height: 4px;
+    background: #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 8px 0;
+}
+
+.mobile-progress-bar {
+    height: 100%;
+    background: #1976d2;
+    transition: width 0.3s ease;
+}
+
+.mobile-spinner {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #e0e0e0;
+    border-top: 2px solid #1976d2;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Toast notifications for mobile */
+.mobile-toast {
+    position: fixed;
+    bottom: 100px;
+    left: 16px;
+    right: 16px;
+    background: #333;
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    z-index: 1002;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.mobile-toast.show {
+    transform: translateY(0);
+}
+
+.mobile-toast.success {
+    background: #4caf50;
+}
+
+.mobile-toast.error {
+    background: #f44336;
+}
+
+.mobile-toast.warning {
+    background: #ff9800;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .mobile-card {
+        margin: 4px;
+        padding: 12px;
+    }
+    
+    .mobile-measurement-controls {
+        grid-template-columns: 1fr;
+    }
+    
+    .mobile-nav {
+        padding: 4px 0;
+    }
+    
+    .mobile-nav-item {
+        padding: 4px;
+        font-size: 11px;
+    }
+    
+    .mobile-nav-icon {
+        font-size: 18px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .mobile-card {
+        background: #2d2d2d;
+        border-color: #444;
+        color: #fff;
+    }
+    
+    .mobile-nav {
+        background: #2d2d2d;
+        border-color: #444;
+    }
+    
+    .mobile-nav-item {
+        color: #ccc;
+    }
+    
+    .mobile-nav-item.active {
+        color: #1976d2;
+    }
+    
+    .mobile-input {
+        background: #2d2d2d;
+        border-color: #444;
+        color: #fff;
+    }
+    
+    .mobile-measurement-panel {
+        background: #2d2d2d;
+        color: #fff;
+    }
+    
+    .mobile-measurement-display {
+        background: #444;
+        color: #1976d2;
+    }
+}

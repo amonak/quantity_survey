@@ -1,0 +1,224 @@
+{
+	"actions": [],
+	"allow_import": 1,
+	"allow_rename": 1,
+	"autoname": "naming_series:",
+	"creation": "2025-07-29 12:00:00.000000",
+	"doctype": "DocType",
+	"document_type": "Document",
+	"engine": "InnoDB",
+	"field_order": [
+		"naming_series",
+		"title",
+		"project",
+		"project_name",
+		"column_break_5",
+		"boq_date",
+		"status",
+		"company",
+		"section_break_9",
+		"description",
+		"section_break_11",
+		"boq_items",
+		"section_break_13",
+		"total_quantity",
+		"column_break_15",
+		"total_amount",
+		"section_break_17",
+		"remarks",
+		"section_break_19",
+		"amended_from"
+	],
+	"fields": [
+		{
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"label": "Series",
+			"options": "BOQ-.YYYY.-",
+			"reqd": 1
+		},
+		{
+			"fieldname": "title",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "BoQ Title",
+			"reqd": 1
+		},
+		{
+			"fieldname": "project",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Project",
+			"options": "Project",
+			"reqd": 1
+		},
+		{
+			"depends_on": "project",
+			"fetch_from": "project.project_name",
+			"fieldname": "project_name",
+			"fieldtype": "Data",
+			"label": "Project Name",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_5",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "Today",
+			"fieldname": "boq_date",
+			"fieldtype": "Date",
+			"in_list_view": 1,
+			"label": "BoQ Date",
+			"reqd": 1
+		},
+		{
+			"default": "Draft",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Status",
+			"options": "Draft\nSubmitted\nApproved\nCancelled",
+			"reqd": 1
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"label": "Company",
+			"options": "Company",
+			"reqd": 1
+		},
+		{
+			"collapsible": 1,
+			"fieldname": "section_break_9",
+			"fieldtype": "Section Break",
+			"label": "Description"
+		},
+		{
+			"fieldname": "description",
+			"fieldtype": "Text Editor",
+			"label": "Description"
+		},
+		{
+			"fieldname": "section_break_11",
+			"fieldtype": "Section Break",
+			"label": "BoQ Items"
+		},
+		{
+			"fieldname": "boq_items",
+			"fieldtype": "Table",
+			"label": "BoQ Items",
+			"options": "BoQ Item",
+			"reqd": 1
+		},
+		{
+			"fieldname": "section_break_13",
+			"fieldtype": "Section Break",
+			"label": "Totals"
+		},
+		{
+			"fieldname": "total_quantity",
+			"fieldtype": "Float",
+			"label": "Total Quantity",
+			"precision": "3",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_15",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "total_amount",
+			"fieldtype": "Currency",
+			"label": "Total Amount",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"collapsible": 1,
+			"fieldname": "section_break_17",
+			"fieldtype": "Section Break",
+			"label": "Additional Information"
+		},
+		{
+			"fieldname": "remarks",
+			"fieldtype": "Small Text",
+			"label": "Remarks"
+		},
+		{
+			"fieldname": "section_break_19",
+			"fieldtype": "Section Break"
+		},
+		{
+			"fieldname": "amended_from",
+			"fieldtype": "Link",
+			"label": "Amended From",
+			"no_copy": 1,
+			"options": "BoQ",
+			"print_hide": 1,
+			"read_only": 1
+		}
+	],
+	"icon": "fa fa-file-text",
+	"idx": 0,
+	"is_submittable": 1,
+	"links": [
+		{
+			"link_doctype": "Valuation",
+			"link_fieldname": "boq"
+		},
+		{
+			"link_doctype": "Variation Order",
+			"link_fieldname": "boq"
+		}
+	],
+	"modified": "2025-07-29 12:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Quantity Surveying",
+	"name": "BoQ",
+	"naming_rule": "By Naming Series",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"submit": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Quantity Survey Manager",
+			"share": 1,
+			"submit": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Quantity Survey Officer",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

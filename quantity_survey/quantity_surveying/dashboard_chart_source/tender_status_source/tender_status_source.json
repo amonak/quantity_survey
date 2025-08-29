@@ -1,0 +1,15 @@
+{
+ "creation": "2025-01-20 10:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "filters": "[]",
+ "idx": 0,
+ "is_standard": 1,
+ "modified": "2025-01-20 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Quantity Surveying",
+ "name": "Tender Status Source",
+ "owner": "Administrator",
+ "source_name": "Tender Status Source",
+ "timeseries": 0
+}

@@ -1,0 +1,29 @@
+{
+	"attach_print": 0,
+	"channel": "Email",
+	"condition": "doc.docstatus == 1",
+	"creation": "2025-07-29 12:00:00.000000",
+	"date_changed": "",
+	"days_in_advance": 0,
+	"docstatus": 0,
+	"doctype": "Notification",
+	"document_type": "Valuation",
+	"enabled": 1,
+	"event": "After Insert",
+	"idx": 0,
+	"is_standard": 1,
+	"message": "<table class=\"panel-header\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n\t<tr height=\"10\"></tr>\n\t<tr>\n\t\t<td width=\"15\"></td>\n\t\t<td>\n\t\t\t<div class=\"text-medium text-muted\">\n\t\t\t\t<h2>{{_(\"Valuation Submitted:\")}} {{ doc.name }}</h2>\n\t\t\t</div>\n\t\t</td>\n\t\t<td width=\"15\"></td>\n\t</tr>\n\t<tr height=\"10\"></tr>\n</table>\n\n<table class=\"panel-body\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n\t<tr height=\"10\"></tr>\n\t<tr>\n\t\t<td width=\"15\"></td>\n\t\t<td>\n\t\t\t<div>\n\t\t\t\t<ul class=\"list-unstyled\" style=\"line-height: 1.7\">\n\t\t\t\t\t<li><b>{{_(\"Valuation\")}}: </b>{{ doc.name }} - {{ doc.valuation_title }}</li>\n\t\t\t\t\t<li><b>{{_(\"Project\")}}: </b>{{ doc.project }}</li>\n\t\t\t\t\t<li><b>{{_(\"BoQ\")}}: </b>{{ doc.boq }}</li>\n\t\t\t\t\t<li><b>{{_(\"Date\")}}: </b>{{ melon.utils.formatdate(doc.valuation_date) }}</li>\n\t\t\t\t\t<li><b>{{_(\"Current Valuation\")}}: </b>{{ melon.utils.fmt_money(doc.current_valuation, currency=melon.defaults.get_global_default(\"currency\")) }}</li>\n\t\t\t\t\t<li><b>{{_(\"Net Payable\")}}: </b>{{ melon.utils.fmt_money(doc.net_payable, currency=melon.defaults.get_global_default(\"currency\")) }}</li>\n\t\t\t\t\t<li><b>{{ _(\"Valuation Document\") }}: </b>{{ melon.utils.get_link_to_form(doc.doctype, doc.name) }}</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</td>\n\t\t<td width=\"15\"></td>\n\t</tr>\n\t<tr height=\"10\"></tr>\n</table>",
+	"modified": "2025-07-29 12:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Quantity Surveying",
+	"name": "Valuation Submitted",
+	"owner": "Administrator",
+	"recipients": [
+		{
+			"receiver_by_role": "Quantity Survey Manager"
+		}
+	],
+	"send_system_notification": 1,
+	"send_to_all_assignees": 1,
+	"subject": "Valuation Submitted: {{ doc.name }}"
+}

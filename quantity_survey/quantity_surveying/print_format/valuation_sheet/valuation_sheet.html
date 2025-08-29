@@ -1,0 +1,119 @@
+{%- from "templates/print_formats/standard_macros.html" import add_header -%}
+
+{{ add_header(0, 0, doc, letter_head, no_letterhead, 0) }}
+
+<div class="text-center" style="margin-bottom: 40px;">
+	<h2>INTERIM VALUATION CERTIFICATE</h2>
+	<h4>{{ doc.valuation_title }}</h4>
+</div>
+
+<div class="row" style="margin-bottom: 30px;">
+	<div class="col-sm-6">
+		<table class="table table-condensed">
+			<tr><td><b>Certificate No:</b></td><td>{{ doc.name }}</td></tr>
+			<tr><td><b>Date:</b></td><td>{{ melon.utils.formatdate(doc.valuation_date) }}</td></tr>
+			<tr><td><b>Project:</b></td><td>{{ doc.project }}</td></tr>
+			<tr><td><b>BoQ Reference:</b></td><td>{{ doc.boq }}</td></tr>
+		</table>
+	</div>
+	<div class="col-sm-6">
+		<table class="table table-condensed">
+			<tr><td><b>Valuation Type:</b></td><td>{{ doc.valuation_type }}</td></tr>
+			<tr><td><b>Status:</b></td><td>{{ doc.status }}</td></tr>
+			<tr><td><b>Company:</b></td><td>{{ doc.company }}</td></tr>
+		</table>
+	</div>
+</div>
+
+{% if doc.description %}
+<div style="margin-bottom: 30px;">
+	<h5>Description:</h5>
+	<p>{{ doc.description }}</p>
+</div>
+{% endif %}
+
+<div style="margin-bottom: 30px;">
+	<h5>VALUATION ITEMS</h5>
+	<table class="table table-bordered">
+		<thead>
+			<tr style="background-color: #f8f9fa;">
+				<th style="width: 15%;">Item Code</th>
+				<th style="width: 25%;">Description</th>
+				<th style="width: 8%;">UOM</th>
+				<th style="width: 10%;">BoQ Qty</th>
+				<th style="width: 10%;">Previous Qty</th>
+				<th style="width: 10%;">Current Qty</th>
+				<th style="width: 10%;">Rate</th>
+				<th style="width: 12%;">Current Amount</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in doc.valuation_items %}
+			<tr>
+				<td>{{ item.item_code }}</td>
+				<td>{{ item.item_name or item.description }}</td>
+				<td>{{ item.uom }}</td>
+				<td style="text-align: right;">{{ "%.3f" | format(item.boq_quantity or 0) }}</td>
+				<td style="text-align: right;">{{ "%.3f" | format(item.previous_quantity or 0) }}</td>
+				<td style="text-align: right;">{{ "%.3f" | format(item.current_quantity or 0) }}</td>
+				<td style="text-align: right;">{{ melon.utils.fmt_money(item.rate or 0, currency=melon.defaults.get_global_default("currency")) }}</td>
+				<td style="text-align: right;">{{ melon.utils.fmt_money(item.current_amount or 0, currency=melon.defaults.get_global_default("currency")) }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+<div class="row" style="margin-bottom: 30px;">
+	<div class="col-sm-6"></div>
+	<div class="col-sm-6">
+		<table class="table table-condensed">
+			<tr>
+				<td><b>Total Work Done This Period:</b></td>
+				<td style="text-align: right;"><b>{{ melon.utils.fmt_money(doc.current_valuation or 0, currency=melon.defaults.get_global_default("currency")) }}</b></td>
+			</tr>
+			<tr>
+				<td><b>Previous Total:</b></td>
+				<td style="text-align: right;">{{ melon.utils.fmt_money(doc.previous_total or 0, currency=melon.defaults.get_global_default("currency")) }}</td>
+			</tr>
+			<tr style="border-top: 2px solid #000;">
+				<td><b>Cumulative Total:</b></td>
+				<td style="text-align: right;"><b>{{ melon.utils.fmt_money(doc.cumulative_total or 0, currency=melon.defaults.get_global_default("currency")) }}</b></td>
+			</tr>
+			<tr>
+				<td>Less: Retention ({{ doc.retention_percentage or 0 }}%):</td>
+				<td style="text-align: right;">({{ melon.utils.fmt_money(doc.retention_amount or 0, currency=melon.defaults.get_global_default("currency")) }})</td>
+			</tr>
+			<tr style="border-top: 2px solid #000;">
+				<td><b>Net Amount Payable:</b></td>
+				<td style="text-align: right;"><b>{{ melon.utils.fmt_money(doc.net_payable or 0, currency=melon.defaults.get_global_default("currency")) }}</b></td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+{% if doc.remarks %}
+<div style="margin-bottom: 30px;">
+	<h5>Remarks:</h5>
+	<p>{{ doc.remarks }}</p>
+</div>
+{% endif %}
+
+<div class="row" style="margin-top: 60px;">
+	<div class="col-sm-6">
+		<p>
+			<b>Prepared By:</b><br>
+			_________________________<br>
+			Quantity Surveyor<br>
+			Date: _______________
+		</p>
+	</div>
+	<div class="col-sm-6">
+		<p>
+			<b>Approved By:</b><br>
+			_________________________<br>
+			Project Manager<br>
+			Date: _______________
+		</p>
+	</div>
+</div>

@@ -1,0 +1,149 @@
+{
+	"actions": [],
+	"autoname": "hash",
+	"creation": "2025-07-29 12:00:00.000000",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"cost_category",
+		"item_code",
+		"item_name",
+		"description",
+		"column_break_5",
+		"uom",
+		"estimated_quantity",
+		"unit_rate",
+		"estimated_cost",
+		"section_break_10",
+		"risk_factor",
+		"risk_percentage",
+		"column_break_13",
+		"market_rate",
+		"variance_percentage"
+	],
+	"fields": [
+		{
+			"columns": 2,
+			"fieldname": "cost_category",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Cost Category",
+			"options": "Material\nLabor\nEquipment\nSubcontractor\nOverhead\nOther",
+			"reqd": 1,
+			"width": "120px"
+		},
+		{
+			"columns": 2,
+			"fieldname": "item_code",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Item Code",
+			"options": "Item",
+			"width": "150px"
+		},
+		{
+			"columns": 3,
+			"fetch_from": "item_code.item_name",
+			"fieldname": "item_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Item Name",
+			"width": "200px"
+		},
+		{
+			"fieldname": "description",
+			"fieldtype": "Text Editor",
+			"label": "Description"
+		},
+		{
+			"fieldname": "column_break_5",
+			"fieldtype": "Column Break"
+		},
+		{
+			"columns": 1,
+			"fetch_from": "item_code.stock_uom",
+			"fieldname": "uom",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "UOM",
+			"options": "UOM",
+			"width": "80px"
+		},
+		{
+			"columns": 1,
+			"fieldname": "estimated_quantity",
+			"fieldtype": "Float",
+			"in_list_view": 1,
+			"label": "Est. Quantity",
+			"precision": "3",
+			"reqd": 1,
+			"width": "100px"
+		},
+		{
+			"columns": 1,
+			"fieldname": "unit_rate",
+			"fieldtype": "Currency",
+			"in_list_view": 1,
+			"label": "Unit Rate",
+			"precision": "2",
+			"reqd": 1,
+			"width": "100px"
+		},
+		{
+			"columns": 1,
+			"fieldname": "estimated_cost",
+			"fieldtype": "Currency",
+			"in_list_view": 1,
+			"label": "Estimated Cost",
+			"precision": "2",
+			"read_only": 1,
+			"width": "120px"
+		},
+		{
+			"collapsible": 1,
+			"fieldname": "section_break_10",
+			"fieldtype": "Section Break",
+			"label": "Risk Analysis"
+		},
+		{
+			"fieldname": "risk_factor",
+			"fieldtype": "Select",
+			"label": "Risk Factor",
+			"options": "Low\nMedium\nHigh\nCritical"
+		},
+		{
+			"fieldname": "risk_percentage",
+			"fieldtype": "Percent",
+			"label": "Risk %"
+		},
+		{
+			"fieldname": "column_break_13",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "market_rate",
+			"fieldtype": "Currency",
+			"label": "Market Rate",
+			"precision": "2"
+		},
+		{
+			"fieldname": "variance_percentage",
+			"fieldtype": "Percent",
+			"label": "Variance %",
+			"read_only": 1
+		}
+	],
+	"istable": 1,
+	"links": [],
+	"modified": "2025-07-29 12:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Quantity Surveying",
+	"name": "Cost Plan Item",
+	"naming_rule": "Random",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": []
+}

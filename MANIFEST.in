@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include quantity_survey *.css
+recursive-include quantity_survey *.csv
+recursive-include quantity_survey *.html
+recursive-include quantity_survey *.ico
+recursive-include quantity_survey *.js
+recursive-include quantity_survey *.json
+recursive-include quantity_survey *.md
+recursive-include quantity_survey *.png
+recursive-include quantity_survey *.py
+recursive-include quantity_survey *.svg
+recursive-include quantity_survey *.txt
+recursive-exclude quantity_survey *.pyc

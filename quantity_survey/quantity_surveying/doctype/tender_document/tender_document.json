@@ -1,0 +1,74 @@
+{
+	"actions": [],
+	"autoname": "hash",
+	"creation": "2025-07-29 12:00:00.000000",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"document_name",
+		"document_type",
+		"column_break_3",
+		"is_mandatory",
+		"document_file",
+		"description"
+	],
+	"fields": [
+		{
+			"columns": 3,
+			"fieldname": "document_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Document Name",
+			"reqd": 1,
+			"width": "200px"
+		},
+		{
+			"columns": 2,
+			"fieldname": "document_type",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Document Type",
+			"options": "Tender Notice\nInstructions to Bidders\nBill of Quantities\nTechnical Specifications\nContract Conditions\nDrawings\nForms\nOther",
+			"width": "150px"
+		},
+		{
+			"fieldname": "column_break_3",
+			"fieldtype": "Column Break"
+		},
+		{
+			"columns": 1,
+			"default": "0",
+			"fieldname": "is_mandatory",
+			"fieldtype": "Check",
+			"in_list_view": 1,
+			"label": "Mandatory",
+			"width": "80px"
+		},
+		{
+			"columns": 2,
+			"fieldname": "document_file",
+			"fieldtype": "Attach",
+			"in_list_view": 1,
+			"label": "Document File",
+			"width": "150px"
+		},
+		{
+			"fieldname": "description",
+			"fieldtype": "Text",
+			"label": "Description"
+		}
+	],
+	"istable": 1,
+	"links": [],
+	"modified": "2025-07-29 12:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Quantity Surveying",
+	"name": "Tender Document",
+	"naming_rule": "Random",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": []
+}

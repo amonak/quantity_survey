@@ -1,0 +1,32 @@
+{
+ "channel": "Email",
+ "condition": "doc.closing_date <= melon.utils.add_days(melon.utils.nowdate(), 7) and doc.status == 'Open'",
+ "creation": "2025-01-20 10:00:00.000000",
+ "document_type": "Tender Package",
+ "docstatus": 0,
+ "doctype": "Notification",
+ "enabled": 1,
+ "event": "Daily",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Tender Package {{ doc.name }} for project {{ doc.project }} is closing in 7 days. Closing date: {{ doc.closing_date }}",
+ "modified": "2025-01-20 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Quantity Surveying",
+ "name": "Tender Closing Soon",
+ "owner": "Administrator",
+ "property_value": "",
+ "recipients": [
+  {
+   "receiver_by_document_field": "",
+   "receiver_by_role": "Procurement Manager"
+  },
+  {
+   "receiver_by_document_field": "",
+   "receiver_by_role": "Quantity Surveyor"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "subject": "Tender Closing Soon - {{ doc.name }}"
+}

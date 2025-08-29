@@ -1,0 +1,404 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "field:tender_package_title",
+	"creation": "2025-07-29 12:00:00.000000",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"naming_series",
+		"tender_package_title",
+		"project",
+		"status",
+		"column_break_5",
+		"tender_type",
+		"procurement_method",
+		"contract_type",
+		"contract_duration",
+		"section_break_10",
+		"description",
+		"scope_of_work",
+		"column_break_13",
+		"special_conditions",
+		"technical_specifications",
+		"section_break_16",
+		"estimated_value",
+		"currency",
+		"budget_allocated",
+		"column_break_20",
+		"bid_security_percentage",
+		"bid_security_amount",
+		"performance_guarantee_percentage",
+		"section_break_24",
+		"tender_publication_date",
+		"pre_bid_meeting_date",
+		"bid_submission_deadline",
+		"column_break_28",
+		"bid_opening_date",
+		"bid_evaluation_period",
+		"contract_award_date",
+		"section_break_32",
+		"qualification_criteria",
+		"evaluation_criteria",
+		"column_break_35",
+		"minimum_experience_years",
+		"minimum_financial_capacity",
+		"required_certifications",
+		"section_break_39",
+		"tender_documents",
+		"section_break_41",
+		"invited_contractors",
+		"section_break_43",
+		"tender_quotes",
+		"section_break_45",
+		"total_quotes_received",
+		"lowest_quote_amount",
+		"winning_contractor",
+		"column_break_49",
+		"winning_quote_amount",
+		"savings_percentage",
+		"awarded_amount"
+	],
+	"fields": [
+		{
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"label": "Series",
+			"options": "TNR-.YYYY.-",
+			"reqd": 1
+		},
+		{
+			"fieldname": "tender_package_title",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Tender Package Title",
+			"reqd": 1,
+			"unique": 1
+		},
+		{
+			"fieldname": "project",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Project",
+			"options": "Project",
+			"reqd": 1
+		},
+		{
+			"default": "Draft",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Status",
+			"options": "Draft\nPublished\nBid Collection\nBid Evaluation\nAwarded\nContracted\nCancelled",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_5",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "tender_type",
+			"fieldtype": "Select",
+			"label": "Tender Type",
+			"options": "Open Tender\nRestricted Tender\nNegotiated Procedure\nCompetitive Dialogue\nInnovation Partnership",
+			"reqd": 1
+		},
+		{
+			"fieldname": "procurement_method",
+			"fieldtype": "Select",
+			"label": "Procurement Method",
+			"options": "Single Stage\nTwo Stage\nPrequalification Required\nFramework Agreement"
+		},
+		{
+			"fieldname": "contract_type",
+			"fieldtype": "Select",
+			"label": "Contract Type",
+			"options": "Lump Sum\nUnit Rate\nCost Plus\nDesign & Build\nTurnkey",
+			"reqd": 1
+		},
+		{
+			"fieldname": "contract_duration",
+			"fieldtype": "Data",
+			"label": "Contract Duration"
+		},
+		{
+			"fieldname": "section_break_10",
+			"fieldtype": "Section Break",
+			"label": "Tender Details"
+		},
+		{
+			"fieldname": "description",
+			"fieldtype": "Text Editor",
+			"label": "Description"
+		},
+		{
+			"fieldname": "scope_of_work",
+			"fieldtype": "Text Editor",
+			"label": "Scope of Work"
+		},
+		{
+			"fieldname": "column_break_13",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "special_conditions",
+			"fieldtype": "Text Editor",
+			"label": "Special Conditions"
+		},
+		{
+			"fieldname": "technical_specifications",
+			"fieldtype": "Text Editor",
+			"label": "Technical Specifications"
+		},
+		{
+			"fieldname": "section_break_16",
+			"fieldtype": "Section Break",
+			"label": "Financial Information"
+		},
+		{
+			"fieldname": "estimated_value",
+			"fieldtype": "Currency",
+			"label": "Estimated Value",
+			"precision": "2"
+		},
+		{
+			"fieldname": "currency",
+			"fieldtype": "Link",
+			"label": "Currency",
+			"options": "Currency"
+		},
+		{
+			"fieldname": "budget_allocated",
+			"fieldtype": "Currency",
+			"label": "Budget Allocated",
+			"precision": "2"
+		},
+		{
+			"fieldname": "column_break_20",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "bid_security_percentage",
+			"fieldtype": "Percent",
+			"label": "Bid Security %"
+		},
+		{
+			"fieldname": "bid_security_amount",
+			"fieldtype": "Currency",
+			"label": "Bid Security Amount",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "performance_guarantee_percentage",
+			"fieldtype": "Percent",
+			"label": "Performance Guarantee %"
+		},
+		{
+			"fieldname": "section_break_24",
+			"fieldtype": "Section Break",
+			"label": "Important Dates"
+		},
+		{
+			"fieldname": "tender_publication_date",
+			"fieldtype": "Date",
+			"label": "Tender Publication Date"
+		},
+		{
+			"fieldname": "pre_bid_meeting_date",
+			"fieldtype": "Datetime",
+			"label": "Pre-bid Meeting Date"
+		},
+		{
+			"fieldname": "bid_submission_deadline",
+			"fieldtype": "Datetime",
+			"label": "Bid Submission Deadline",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_28",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "bid_opening_date",
+			"fieldtype": "Datetime",
+			"label": "Bid Opening Date"
+		},
+		{
+			"fieldname": "bid_evaluation_period",
+			"fieldtype": "Data",
+			"label": "Bid Evaluation Period"
+		},
+		{
+			"fieldname": "contract_award_date",
+			"fieldtype": "Date",
+			"label": "Contract Award Date"
+		},
+		{
+			"fieldname": "section_break_32",
+			"fieldtype": "Section Break",
+			"label": "Qualification & Evaluation Criteria"
+		},
+		{
+			"fieldname": "qualification_criteria",
+			"fieldtype": "Text Editor",
+			"label": "Qualification Criteria"
+		},
+		{
+			"fieldname": "evaluation_criteria",
+			"fieldtype": "Text Editor",
+			"label": "Evaluation Criteria"
+		},
+		{
+			"fieldname": "column_break_35",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "minimum_experience_years",
+			"fieldtype": "Int",
+			"label": "Minimum Experience (Years)"
+		},
+		{
+			"fieldname": "minimum_financial_capacity",
+			"fieldtype": "Currency",
+			"label": "Minimum Financial Capacity",
+			"precision": "2"
+		},
+		{
+			"fieldname": "required_certifications",
+			"fieldtype": "Text",
+			"label": "Required Certifications"
+		},
+		{
+			"fieldname": "section_break_39",
+			"fieldtype": "Section Break",
+			"label": "Tender Documents"
+		},
+		{
+			"fieldname": "tender_documents",
+			"fieldtype": "Table",
+			"label": "Tender Documents",
+			"options": "Tender Document"
+		},
+		{
+			"fieldname": "section_break_41",
+			"fieldtype": "Section Break",
+			"label": "Invited Contractors"
+		},
+		{
+			"fieldname": "invited_contractors",
+			"fieldtype": "Table",
+			"label": "Invited Contractors",
+			"options": "Invited Contractor"
+		},
+		{
+			"fieldname": "section_break_43",
+			"fieldtype": "Section Break",
+			"label": "Tender Quotes"
+		},
+		{
+			"fieldname": "tender_quotes",
+			"fieldtype": "Table",
+			"label": "Tender Quotes",
+			"options": "Tender Quote Item",
+			"read_only": 1
+		},
+		{
+			"fieldname": "section_break_45",
+			"fieldtype": "Section Break",
+			"label": "Award Summary"
+		},
+		{
+			"fieldname": "total_quotes_received",
+			"fieldtype": "Int",
+			"label": "Total Quotes Received",
+			"read_only": 1
+		},
+		{
+			"fieldname": "lowest_quote_amount",
+			"fieldtype": "Currency",
+			"label": "Lowest Quote Amount",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "winning_contractor",
+			"fieldtype": "Link",
+			"label": "Winning Contractor",
+			"options": "Supplier"
+		},
+		{
+			"fieldname": "column_break_49",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "winning_quote_amount",
+			"fieldtype": "Currency",
+			"label": "Winning Quote Amount",
+			"precision": "2"
+		},
+		{
+			"fieldname": "savings_percentage",
+			"fieldtype": "Percent",
+			"label": "Savings %",
+			"read_only": 1
+		},
+		{
+			"fieldname": "awarded_amount",
+			"fieldtype": "Currency",
+			"label": "Awarded Amount",
+			"precision": "2"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"is_submittable": 1,
+	"links": [],
+	"modified": "2025-07-29 12:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Quantity Surveying",
+	"name": "Tender Package",
+	"naming_rule": "By fieldname",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Quantity Surveyor",
+			"share": 1,
+			"submit": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Projects Manager",
+			"share": 1,
+			"submit": 1,
+			"write": 1
+		},
+		{
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Projects User",
+			"share": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

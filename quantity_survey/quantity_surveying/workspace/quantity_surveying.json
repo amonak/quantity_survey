@@ -1,0 +1,344 @@
+{
+	"charts": [
+		{
+			"chart_name": "Valuation Progress Tracking",
+			"label": "Valuation Progress"
+		},
+		{
+			"chart_name": "Project Cost Overview",
+			"label": "Cost Overview"
+		},
+		{
+			"chart_name": "Payment Certificates Trend",
+			"label": "Payment Trend"
+		},
+		{
+			"chart_name": "BOQ vs Actual Analysis",
+			"label": "BOQ vs Actual"
+		},
+		{
+			"chart_name": "Variation Orders Impact",
+			"label": "Variation Impact"
+		},
+		{
+			"chart_name": "Tender Status Distribution",
+			"label": "Tender Status"
+		}
+	],
+	"content": "[{\"id\":\"SJ8CK1lqRD\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BoQ\",\"col\":4}},{\"id\":\"5Ny7qPy3Lp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Valuation\",\"col\":4}},{\"id\":\"DdlKONj4HS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Variation Order\",\"col\":4}},{\"id\":\"qKI4X8DsGz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payment Certificate\",\"col\":4}},{\"id\":\"chart-UdCKvRNgpb\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Valuation Progress Chart\",\"col\":6}},{\"id\":\"chart-5rVDzBQwfY\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Cost vs Actual Chart\",\"col\":6}},{\"id\":\"number_card-qLOGD5k79l\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Contract Value\",\"col\":4}},{\"id\":\"number_card-pJh7nLLJ8f\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Certified Amount\",\"col\":4}},{\"id\":\"number_card-jcRrOxYW4e\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Retention Balance\",\"col\":4}},{\"id\":\"number_card-eBu2lP3TOS\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pending Valuations\",\"col\":3}}]",
+	"creation": "2025-07-29 12:00:00.000000",
+	"developer_mode_only": 0,
+	"disable_user_customization": 0,
+	"docstatus": 0,
+	"doctype": "Workspace",
+	"extends": "",
+	"extends_another_page": 0,
+	"hide_custom": 0,
+	"icon": "fa fa-file-text",
+	"idx": 0,
+	"is_hidden": 0,
+	"label": "Quantity Surveying",
+	"links": [
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Setup",
+			"link_count": 0,
+			"link_to": "",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "BoQ",
+			"link_count": 0,
+			"link_to": "BoQ",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Cost Plan",
+			"link_count": 0,
+			"link_to": "Cost Plan",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Valuations",
+			"link_count": 0,
+			"link_to": "",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Valuation",
+			"link_count": 0,
+			"link_to": "Valuation",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Payment Certificate",
+			"link_count": 0,
+			"link_to": "Payment Certificate",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Final Account",
+			"link_count": 0,
+			"link_to": "Final Account",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Variations",
+			"link_count": 0,
+			"link_to": "",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Variation Order",
+			"link_count": 0,
+			"link_to": "Variation Order",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Tendering",
+			"link_count": 0,
+			"link_to": "",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Tender Package",
+			"link_count": 0,
+			"link_to": "Tender Package",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Tender Quote",
+			"link_count": 0,
+			"link_to": "Tender Quote",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Tender Document",
+			"link_count": 0,
+			"link_to": "Tender Document",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Invited Contractor",
+			"link_count": 0,
+			"link_to": "Invited Contractor",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Reports",
+			"link_count": 0,
+			"link_to": "",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 1,
+			"label": "Project Financial Summary",
+			"link_count": 0,
+			"link_to": "Project Financial Summary",
+			"link_type": "Report",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 1,
+			"label": "BOQ Item Analysis",
+			"link_count": 0,
+			"link_to": "BOQ Item Analysis",
+			"link_type": "Report",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 1,
+			"label": "BOQ Summary",
+			"link_count": 0,
+			"link_to": "BOQ Summary",
+			"link_type": "Report",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 1,
+			"label": "Variation Orders Analysis",
+			"link_count": 0,
+			"link_to": "Variation Orders Analysis",
+			"link_type": "Report",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 1,
+			"label": "Cost Control Analysis",
+			"link_count": 0,
+			"link_to": "Cost Control Analysis",
+			"link_type": "Report",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 1,
+			"label": "Progress Tracking Report",
+			"link_count": 0,
+			"link_to": "Progress Tracking Report",
+			"link_type": "Report",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 1,
+			"label": "Payment Certificates Summary",
+			"link_count": 0,
+			"link_to": "Payment Certificates Summary",
+			"link_type": "Report",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 1,
+			"label": "Final Account Analysis",
+			"link_count": 0,
+			"link_to": "Final Account Analysis",
+			"link_type": "Report",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 1,
+			"label": "Tender Evaluation Report",
+			"link_count": 0,
+			"link_to": "Tender Evaluation Report",
+			"link_type": "Report",
+			"onboard": 0,
+			"type": "Link"
+		}
+	],
+	"modified": "2025-07-29 12:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Quantity Surveying",
+	"name": "Quantity Surveying",
+	"number_cards": [
+		{
+			"number_card_name": "Total Contract Value"
+		},
+		{
+			"number_card_name": "Total Certified Amount"
+		},
+		{
+			"number_card_name": "Total BOQ Value"
+		},
+		{
+			"number_card_name": "Total Valuations"
+		},
+		{
+			"number_card_name": "Total Payments"
+		},
+		{
+			"number_card_name": "Total Variations"
+		}
+	],
+	"owner": "Administrator",
+	"parent_page": "",
+	"public": 1,
+	"quick_lists": [],
+	"roles": [],
+	"sequence_id": 15.0,
+	"shortcuts": [
+		{
+			"color": "Blue",
+			"doc_view": "List",
+			"label": "BoQ",
+			"link_to": "BoQ",
+			"type": "DocType"
+		},
+		{
+			"color": "Green",
+			"doc_view": "List",
+			"label": "Valuation",
+			"link_to": "Valuation",
+			"type": "DocType"
+		},
+		{
+			"color": "Orange",
+			"doc_view": "List",
+			"label": "Variation Order",
+			"link_to": "Variation Order",
+			"type": "DocType"
+		},
+		{
+			"color": "Purple",
+			"doc_view": "List",
+			"label": "Payment Certificate",
+			"link_to": "Payment Certificate",
+			"type": "DocType"
+		}
+	],
+	"title": "Quantity Surveying"
+}

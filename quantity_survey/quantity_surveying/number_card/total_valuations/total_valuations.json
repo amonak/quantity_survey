@@ -1,0 +1,23 @@
+{
+ "aggregate_function_based_on": "total_valuation",
+ "color": "#2ecc71",
+ "creation": "2025-01-20 10:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Valuation",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[{\"fieldname\": \"docstatus\", \"operator\": \"=\", \"value\": 1}]",
+ "function": "Sum",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Total Valuations",
+ "modified": "2025-01-20 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Quantity Surveying",
+ "name": "Total Valuations",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Monthly"
+}

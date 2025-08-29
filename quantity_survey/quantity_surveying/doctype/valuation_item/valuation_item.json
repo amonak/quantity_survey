@@ -1,0 +1,171 @@
+{
+	"actions": [],
+	"autoname": "hash",
+	"creation": "2025-07-29 12:00:00.000000",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"item_code",
+		"item_name",
+		"description",
+		"column_break_4",
+		"uom",
+		"rate",
+		"section_break_7",
+		"boq_quantity",
+		"previous_quantity",
+		"current_quantity",
+		"cumulative_quantity",
+		"column_break_12",
+		"boq_amount",
+		"previous_amount",
+		"current_amount",
+		"cumulative_amount"
+	],
+	"fields": [
+		{
+			"columns": 2,
+			"fieldname": "item_code",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Item Code",
+			"options": "Item",
+			"read_only": 1,
+			"width": "150px"
+		},
+		{
+			"columns": 2,
+			"fieldname": "item_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Item Name",
+			"read_only": 1,
+			"width": "200px"
+		},
+		{
+			"fieldname": "description",
+			"fieldtype": "Text Editor",
+			"label": "Description",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"columns": 1,
+			"fieldname": "uom",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "UOM",
+			"options": "UOM",
+			"read_only": 1,
+			"width": "80px"
+		},
+		{
+			"columns": 1,
+			"fieldname": "rate",
+			"fieldtype": "Currency",
+			"in_list_view": 1,
+			"label": "Rate",
+			"precision": "2",
+			"read_only": 1,
+			"width": "100px"
+		},
+		{
+			"fieldname": "section_break_7",
+			"fieldtype": "Section Break",
+			"label": "Quantities"
+		},
+		{
+			"columns": 1,
+			"fieldname": "boq_quantity",
+			"fieldtype": "Float",
+			"label": "BoQ Quantity",
+			"precision": "3",
+			"read_only": 1,
+			"width": "100px"
+		},
+		{
+			"columns": 1,
+			"fieldname": "previous_quantity",
+			"fieldtype": "Float",
+			"label": "Previous Quantity",
+			"precision": "3",
+			"read_only": 1,
+			"width": "100px"
+		},
+		{
+			"columns": 1,
+			"fieldname": "current_quantity",
+			"fieldtype": "Float",
+			"in_list_view": 1,
+			"label": "Current Quantity",
+			"precision": "3",
+			"width": "100px"
+		},
+		{
+			"columns": 1,
+			"fieldname": "cumulative_quantity",
+			"fieldtype": "Float",
+			"label": "Cumulative Quantity",
+			"precision": "3",
+			"read_only": 1,
+			"width": "100px"
+		},
+		{
+			"fieldname": "column_break_12",
+			"fieldtype": "Column Break"
+		},
+		{
+			"columns": 1,
+			"fieldname": "boq_amount",
+			"fieldtype": "Currency",
+			"label": "BoQ Amount",
+			"precision": "2",
+			"read_only": 1,
+			"width": "120px"
+		},
+		{
+			"columns": 1,
+			"fieldname": "previous_amount",
+			"fieldtype": "Currency",
+			"label": "Previous Amount",
+			"precision": "2",
+			"read_only": 1,
+			"width": "120px"
+		},
+		{
+			"columns": 1,
+			"fieldname": "current_amount",
+			"fieldtype": "Currency",
+			"in_list_view": 1,
+			"label": "Current Amount",
+			"precision": "2",
+			"read_only": 1,
+			"width": "120px"
+		},
+		{
+			"columns": 1,
+			"fieldname": "cumulative_amount",
+			"fieldtype": "Currency",
+			"label": "Cumulative Amount",
+			"precision": "2",
+			"read_only": 1,
+			"width": "120px"
+		}
+	],
+	"istable": 1,
+	"links": [],
+	"modified": "2025-07-29 12:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Quantity Surveying",
+	"name": "Valuation Item",
+	"naming_rule": "Random",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": []
+}

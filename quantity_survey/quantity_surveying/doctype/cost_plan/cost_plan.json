@@ -1,0 +1,304 @@
+{
+	"actions": [],
+	"allow_import": 1,
+	"allow_rename": 1,
+	"autoname": "naming_series:",
+	"creation": "2025-07-29 12:00:00.000000",
+	"doctype": "DocType",
+	"document_type": "Document",
+	"engine": "InnoDB",
+	"field_order": [
+		"naming_series",
+		"cost_plan_title",
+		"project",
+		"project_name",
+		"column_break_5",
+		"plan_date",
+		"status",
+		"plan_type",
+		"company",
+		"section_break_10",
+		"description",
+		"budget_source",
+		"section_break_13",
+		"cost_plan_items",
+		"section_break_15",
+		"total_estimated_cost",
+		"contingency_percentage",
+		"contingency_amount",
+		"column_break_19",
+		"overhead_percentage",
+		"overhead_amount",
+		"total_project_cost",
+		"section_break_23",
+		"approved_budget",
+		"budget_variance",
+		"column_break_26",
+		"approved_by",
+		"approved_date",
+		"section_break_29",
+		"remarks",
+		"section_break_31",
+		"amended_from"
+	],
+	"fields": [
+		{
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"label": "Series",
+			"options": "CP-.YYYY.-",
+			"reqd": 1
+		},
+		{
+			"fieldname": "cost_plan_title",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Cost Plan Title",
+			"reqd": 1
+		},
+		{
+			"fieldname": "project",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Project",
+			"options": "Project",
+			"reqd": 1
+		},
+		{
+			"depends_on": "project",
+			"fetch_from": "project.project_name",
+			"fieldname": "project_name",
+			"fieldtype": "Data",
+			"label": "Project Name",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_5",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "Today",
+			"fieldname": "plan_date",
+			"fieldtype": "Date",
+			"in_list_view": 1,
+			"label": "Plan Date",
+			"reqd": 1
+		},
+		{
+			"default": "Draft",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Status",
+			"options": "Draft\nSubmitted\nApproved\nRevised\nCancelled",
+			"reqd": 1
+		},
+		{
+			"default": "Preliminary",
+			"fieldname": "plan_type",
+			"fieldtype": "Select",
+			"label": "Plan Type",
+			"options": "Preliminary\nDetailed\nRevised\nFinal",
+			"reqd": 1
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"label": "Company",
+			"options": "Company",
+			"reqd": 1
+		},
+		{
+			"fieldname": "section_break_10",
+			"fieldtype": "Section Break",
+			"label": "Details"
+		},
+		{
+			"fieldname": "description",
+			"fieldtype": "Text Editor",
+			"label": "Description"
+		},
+		{
+			"fieldname": "budget_source",
+			"fieldtype": "Select",
+			"label": "Budget Source",
+			"options": "Client Budget\nInternal Estimate\nMarket Analysis\nHistorical Data"
+		},
+		{
+			"fieldname": "section_break_13",
+			"fieldtype": "Section Break",
+			"label": "Cost Breakdown"
+		},
+		{
+			"fieldname": "cost_plan_items",
+			"fieldtype": "Table",
+			"label": "Cost Plan Items",
+			"options": "Cost Plan Item",
+			"reqd": 1
+		},
+		{
+			"fieldname": "section_break_15",
+			"fieldtype": "Section Break",
+			"label": "Cost Summary"
+		},
+		{
+			"fieldname": "total_estimated_cost",
+			"fieldtype": "Currency",
+			"label": "Total Estimated Cost",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"default": "10",
+			"fieldname": "contingency_percentage",
+			"fieldtype": "Percent",
+			"label": "Contingency %"
+		},
+		{
+			"fieldname": "contingency_amount",
+			"fieldtype": "Currency",
+			"label": "Contingency Amount",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_19",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "15",
+			"fieldname": "overhead_percentage",
+			"fieldtype": "Percent",
+			"label": "Overhead %"
+		},
+		{
+			"fieldname": "overhead_amount",
+			"fieldtype": "Currency",
+			"label": "Overhead Amount",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "total_project_cost",
+			"fieldtype": "Currency",
+			"label": "Total Project Cost",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "section_break_23",
+			"fieldtype": "Section Break",
+			"label": "Budget Comparison"
+		},
+		{
+			"fieldname": "approved_budget",
+			"fieldtype": "Currency",
+			"label": "Approved Budget",
+			"precision": "2"
+		},
+		{
+			"fieldname": "budget_variance",
+			"fieldtype": "Currency",
+			"label": "Budget Variance",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_26",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "approved_by",
+			"fieldtype": "Link",
+			"label": "Approved By",
+			"options": "User"
+		},
+		{
+			"fieldname": "approved_date",
+			"fieldtype": "Date",
+			"label": "Approved Date"
+		},
+		{
+			"collapsible": 1,
+			"fieldname": "section_break_29",
+			"fieldtype": "Section Break",
+			"label": "Additional Information"
+		},
+		{
+			"fieldname": "remarks",
+			"fieldtype": "Small Text",
+			"label": "Remarks"
+		},
+		{
+			"fieldname": "section_break_31",
+			"fieldtype": "Section Break"
+		},
+		{
+			"fieldname": "amended_from",
+			"fieldtype": "Link",
+			"label": "Amended From",
+			"no_copy": 1,
+			"options": "Cost Plan",
+			"print_hide": 1,
+			"read_only": 1
+		}
+	],
+	"icon": "fa fa-calculator",
+	"idx": 0,
+	"is_submittable": 1,
+	"links": [
+		{
+			"link_doctype": "BoQ",
+			"link_fieldname": "cost_plan"
+		}
+	],
+	"modified": "2025-07-29 12:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Quantity Surveying",
+	"name": "Cost Plan",
+	"naming_rule": "By Naming Series",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"submit": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Quantity Survey Manager",
+			"share": 1,
+			"submit": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Quantity Survey Officer",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

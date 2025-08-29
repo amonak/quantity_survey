@@ -1,0 +1,305 @@
+{
+	"actions": [],
+	"allow_import": 1,
+	"allow_rename": 1,
+	"autoname": "naming_series:",
+	"creation": "2025-07-29 12:00:00.000000",
+	"doctype": "DocType",
+	"document_type": "Document",
+	"engine": "InnoDB",
+	"field_order": [
+		"naming_series",
+		"certificate_title",
+		"valuation",
+		"project",
+		"column_break_5",
+		"certificate_date",
+		"status",
+		"certificate_type",
+		"company",
+		"section_break_10",
+		"description",
+		"section_break_12",
+		"gross_amount",
+		"retention_amount",
+		"column_break_15",
+		"previous_payments",
+		"net_payable",
+		"section_break_18",
+		"contractor",
+		"contractor_name",
+		"column_break_21",
+		"contract_value",
+		"contract_date",
+		"section_break_24",
+		"approved_by",
+		"approved_date",
+		"column_break_27",
+		"payment_due_date",
+		"payment_terms",
+		"section_break_30",
+		"remarks",
+		"section_break_32",
+		"amended_from"
+	],
+	"fields": [
+		{
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"label": "Series",
+			"options": "PC-.YYYY.-",
+			"reqd": 1
+		},
+		{
+			"fieldname": "certificate_title",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Certificate Title",
+			"reqd": 1
+		},
+		{
+			"fieldname": "valuation",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Valuation",
+			"options": "Valuation",
+			"reqd": 1
+		},
+		{
+			"depends_on": "valuation",
+			"fetch_from": "valuation.project",
+			"fieldname": "project",
+			"fieldtype": "Link",
+			"label": "Project",
+			"options": "Project",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_5",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "Today",
+			"fieldname": "certificate_date",
+			"fieldtype": "Date",
+			"in_list_view": 1,
+			"label": "Certificate Date",
+			"reqd": 1
+		},
+		{
+			"default": "Draft",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Status",
+			"options": "Draft\nSubmitted\nApproved\nPaid\nCancelled",
+			"reqd": 1
+		},
+		{
+			"default": "Interim",
+			"fieldname": "certificate_type",
+			"fieldtype": "Select",
+			"label": "Certificate Type",
+			"options": "Interim\nFinal\nAdvance\nMaterial on Site",
+			"reqd": 1
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"label": "Company",
+			"options": "Company",
+			"reqd": 1
+		},
+		{
+			"collapsible": 1,
+			"fieldname": "section_break_10",
+			"fieldtype": "Section Break",
+			"label": "Description"
+		},
+		{
+			"fieldname": "description",
+			"fieldtype": "Text Editor",
+			"label": "Description"
+		},
+		{
+			"fieldname": "section_break_12",
+			"fieldtype": "Section Break",
+			"label": "Payment Details"
+		},
+		{
+			"fetch_from": "valuation.current_valuation",
+			"fieldname": "gross_amount",
+			"fieldtype": "Currency",
+			"label": "Gross Amount",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fetch_from": "valuation.retention_amount",
+			"fieldname": "retention_amount",
+			"fieldtype": "Currency",
+			"label": "Retention Amount",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_15",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "previous_payments",
+			"fieldtype": "Currency",
+			"label": "Previous Payments",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fetch_from": "valuation.net_payable",
+			"fieldname": "net_payable",
+			"fieldtype": "Currency",
+			"label": "Net Payable",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "section_break_18",
+			"fieldtype": "Section Break",
+			"label": "Contractor Information"
+		},
+		{
+			"fieldname": "contractor",
+			"fieldtype": "Link",
+			"label": "Contractor",
+			"options": "Supplier"
+		},
+		{
+			"fetch_from": "contractor.supplier_name",
+			"fieldname": "contractor_name",
+			"fieldtype": "Data",
+			"label": "Contractor Name",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_21",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "contract_value",
+			"fieldtype": "Currency",
+			"label": "Contract Value",
+			"precision": "2"
+		},
+		{
+			"fieldname": "contract_date",
+			"fieldtype": "Date",
+			"label": "Contract Date"
+		},
+		{
+			"fieldname": "section_break_24",
+			"fieldtype": "Section Break",
+			"label": "Approval"
+		},
+		{
+			"fieldname": "approved_by",
+			"fieldtype": "Link",
+			"label": "Approved By",
+			"options": "User"
+		},
+		{
+			"fieldname": "approved_date",
+			"fieldtype": "Date",
+			"label": "Approved Date"
+		},
+		{
+			"fieldname": "column_break_27",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "payment_due_date",
+			"fieldtype": "Date",
+			"label": "Payment Due Date"
+		},
+		{
+			"fieldname": "payment_terms",
+			"fieldtype": "Text",
+			"label": "Payment Terms"
+		},
+		{
+			"collapsible": 1,
+			"fieldname": "section_break_30",
+			"fieldtype": "Section Break",
+			"label": "Additional Information"
+		},
+		{
+			"fieldname": "remarks",
+			"fieldtype": "Small Text",
+			"label": "Remarks"
+		},
+		{
+			"fieldname": "section_break_32",
+			"fieldtype": "Section Break"
+		},
+		{
+			"fieldname": "amended_from",
+			"fieldtype": "Link",
+			"label": "Amended From",
+			"no_copy": 1,
+			"options": "Payment Certificate",
+			"print_hide": 1,
+			"read_only": 1
+		}
+	],
+	"icon": "fa fa-certificate",
+	"idx": 0,
+	"is_submittable": 1,
+	"links": [],
+	"modified": "2025-07-29 12:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Quantity Surveying",
+	"name": "Payment Certificate",
+	"naming_rule": "By Naming Series",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"submit": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Quantity Survey Manager",
+			"share": 1,
+			"submit": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "Quantity Survey Officer",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

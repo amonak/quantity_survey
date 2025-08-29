@@ -1,0 +1,238 @@
+/* Copyright (c) 2025, Alphamonak Solutions */
+
+/* Quantity Survey Global Styles */
+
+/* BoQ Styling */
+.boq-form .form-grid {
+    border: 1px solid #d1d8dd;
+    border-radius: 4px;
+}
+
+.boq-item-row {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.boq-item-row:hover {
+    background: #e3f2fd;
+}
+
+.boq-total {
+    background: #1976d2;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Valuation Styling */
+.valuation-progress {
+    width: 100%;
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.valuation-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #4caf50, #81c784);
+    transition: width 0.3s ease;
+}
+
+.valuation-status {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.valuation-status.draft {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.valuation-status.submitted {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.valuation-status.approved {
+    background: #d4edda;
+    color: #155724;
+}
+
+/* Variation Order Styling */
+.variation-type-addition {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.variation-type-omission {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.variation-type-substitution {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.variation-impact {
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin: 4px 0;
+}
+
+.variation-impact.positive {
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+}
+
+.variation-impact.negative {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+}
+
+/* Payment Certificate Styling */
+.payment-certificate {
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 20px;
+    background: #f8f9fa;
+}
+
+.payment-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.payment-card {
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.payment-amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.retention-amount {
+    color: #ffc107;
+}
+
+.certified-amount {
+    color: #28a745;
+}
+
+/* Dashboard Styling */
+.qs-dashboard-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.qs-metric {
+    text-align: center;
+    padding: 16px;
+}
+
+.qs-metric-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1976d2;
+}
+
+.qs-metric-label {
+    color: #666;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Charts */
+.qs-chart-container {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .payment-summary {
+        grid-template-columns: 1fr;
+    }
+    
+    .boq-form .form-grid {
+        overflow-x: auto;
+    }
+    
+    .qs-dashboard-card {
+        margin-bottom: 12px;
+        padding: 16px;
+    }
+    
+    .qs-metric-value {
+        font-size: 1.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .boq-form,
+    .valuation-form,
+    .payment-certificate {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+    
+    .qs-metric,
+    .qs-chart-container {
+        break-inside: avoid;
+    }
+}
+
+/* Utility Classes */
+.qs-text-center { text-align: center; }
+.qs-text-right { text-align: right; }
+.qs-text-left { text-align: left; }
+
+.qs-mb-1 { margin-bottom: 0.25rem; }
+.qs-mb-2 { margin-bottom: 0.5rem; }
+.qs-mb-3 { margin-bottom: 1rem; }
+.qs-mb-4 { margin-bottom: 1.5rem; }
+
+.qs-mt-1 { margin-top: 0.25rem; }
+.qs-mt-2 { margin-top: 0.5rem; }
+.qs-mt-3 { margin-top: 1rem; }
+.qs-mt-4 { margin-top: 1.5rem; }
+
+.qs-p-1 { padding: 0.25rem; }
+.qs-p-2 { padding: 0.5rem; }
+.qs-p-3 { padding: 1rem; }
+.qs-p-4 { padding: 1.5rem; }
+
+/* Color Classes */
+.qs-primary { color: #1976d2; }
+.qs-success { color: #28a745; }
+.qs-warning { color: #ffc107; }
+.qs-danger { color: #dc3545; }
+.qs-info { color: #17a2b8; }
+
+/* Background Color Classes */
+.qs-bg-primary { background-color: #1976d2; color: white; }
+.qs-bg-success { background-color: #28a745; color: white; }
+.qs-bg-warning { background-color: #ffc107; color: #212529; }
+.qs-bg-danger { background-color: #dc3545; color: white; }
+.qs-bg-info { background-color: #17a2b8; color: white; }
